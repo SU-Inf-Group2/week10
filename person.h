@@ -9,6 +9,7 @@ protected:
 	char* last_name;
 	int EGN[EGN_SIZE];
 public:
+
 	Person();
 	Person(const char* first_name, const char* middle_name,
 		   const char* last_name, const int EGN[EGN_SIZE]);
@@ -18,7 +19,6 @@ public:
 	void set_names(const char* first_name, 
 		           const char* middle_name, 
 		           const char* last_name);
-
 	void set_first_name(const char* first_name);
 	void set_middle_name(const char* middle_name);
 	void set_last_name(const char* last_name);
@@ -27,6 +27,7 @@ public:
 	void print_EGN() const;
 	virtual void print() const;
 };
+
 /*
 //overload
 
@@ -37,11 +38,13 @@ void print(double num);
 
 class Parent
 {
+public:
 	void print() const;
 };
 
-class Child : Parent
+class Child : public Parent
 {
+public:
 	void print() const;
 };	
 
@@ -49,5 +52,7 @@ Child c;
 Parent p;
 p.print(); //Parent::print()
 Parent m = c;
-m.print(); //Child::print()
+m.print();
 */
+
+
